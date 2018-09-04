@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">IntelliCar</string>
+    <string name="profile">""</string>
+    <string name="bookmarks">""</string>
+    <string name="feeds">""</string>
+    <string name="list">""</string>
+    <string name="community">Community</string>
+    <string name="book_type">Literature</string>
+    <string name="literature">Literature</string>
+    <string name="business">Business</string>
+    <string name="horror">Horror</string>
+    <string name="popular_reviews">Popular reviews</string>
+    <string name="all_this">All this has nothing to do with me</string>
+    <string name="review_1">I cannot help but feel there was some kind of hidden point to story I missed</string>
+    <string name="promise">Promise of shadows</string>
+    <string name="review_2">This book is fantastic.It has all the information required for the</string>
+    <string name="full_review"><![CDATA[See full review >]]></string>
+    <string name="profile_name">Marion Newton</string>
+    <string name="profile_info">Focus on product designer, Never stop exploring new design.</string>
+    <string name="location">Shangai - China</string>
+    <string name="all_books">All books</string>
+</resources>

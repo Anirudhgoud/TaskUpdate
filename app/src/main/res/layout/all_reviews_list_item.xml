@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_rounded_grey_bg"
+    android:padding="@dimen/margin_10dp">
+
+    <TextView
+        android:id="@+id/tvReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/ivBookThumbnail"
+        android:ellipsize="end"
+        android:lines="3"
+        android:text="@string/review_1"
+        android:textColor="@color/colorDarkGrey"
+        android:textSize="@dimen/text_small_10" />
+
+    <TextView
+        android:id="@+id/tvSeeReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvReview"
+        android:text="@string/full_review" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSeeReview"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:numStars="5"
+        android:progressTint="@color/colorYellow"
+        android:rating="4" />
+
+    <ImageView
+        android:id="@+id/ivBookThumbnail"
+        android:layout_width="@dimen/margin_80dp"
+        android:layout_height="@dimen/margin_80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/promise_of" />
+
+
+</RelativeLayout>

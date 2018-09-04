@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGrey">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_12dp"
+            android:paddingTop="@dimen/margin_20dp">
+
+            <TextView
+                android:id="@+id/tvProfileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:text="@string/profile_name"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_large_18" />
+
+
+            <TextView
+                android:id="@+id/tvProfileInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvProfileName"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:layout_toLeftOf="@+id/ivProfile"
+                android:text="@string/profile_info" />
+
+
+            <ImageView
+                android:id="@+id/ivLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvProfileInfo"
+                android:layout_marginTop="@dimen/margin_8dp"
+                app:srcCompat="@drawable/ic_location" />
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvProfileInfo"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_toEndOf="@+id/ivLocation"
+                android:layout_toRightOf="@+id/ivLocation"
+                android:text="@string/location" />
+
+            <ImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignBottom="@+id/tvLocation"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/tvName"
+                android:src="@drawable/all_this_has" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_12dp"
+            android:layout_marginTop="@dimen/margin_15dp"
+            android:text="@string/all_books"
+            android:textSize="@dimen/text_large_18" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvAllBooks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_12dp"
+            android:layout_marginTop="@dimen/margin_10dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
