@@ -34,9 +34,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         switch (item.getItemId()) {
             case R.id.book_list:
+                //Nothing to do
                 break;
 
             case R.id.book_feed:
+                //Nothing to do
                 break;
 
             case R.id.book_bookmarks:
@@ -44,7 +46,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 break;
 
             case R.id.profile:
-                //TODO
                 addProfileFragment();
                 break;
         }

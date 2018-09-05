@@ -8,7 +8,7 @@ public class Utility {
 
     public static int getThumbnail(Context context, String iconName) {
 
-        String packageName = null;
+        String packageName;
 
         if (context != null) {
             packageName = context.getPackageName();
