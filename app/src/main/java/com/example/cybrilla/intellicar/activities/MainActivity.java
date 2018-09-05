@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         mBottomNavigationView.setOnNavigationItemSelectedListener(this);
-
     }
 
     @Override
@@ -46,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
             case R.id.profile:
                 //TODO
-                //   addProfileFragment();
+                addProfileFragment();
                 break;
         }
         return true;
@@ -81,5 +80,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         fragmentTransaction.replace(R.id.fragment_container, fragment, fragment.getClass().getSimpleName());
         fragmentTransaction.commit();
     }
+
 
 }

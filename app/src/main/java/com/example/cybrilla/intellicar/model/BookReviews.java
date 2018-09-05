@@ -8,11 +8,29 @@ public class BookReviews {
 
     private String reviewRating;
 
+    public int getmThumbNail() {
+        return mThumbNail;
+    }
+
+    public void setmThumbNail(int mThumbNail) {
+        this.mThumbNail = mThumbNail;
+    }
+
+    private int mThumbNail;
+
     public BookReviews(String bookName, String review, String reviewerName, String rating) {
         mBookName = bookName;
         mReview = review;
         mReviewerName = reviewerName;
         reviewRating = rating;
+    }
+
+    public BookReviews(String bookName, String review, String reviewerName, String rating, int thumbNail) {
+        mBookName = bookName;
+        mReview = review;
+        mReviewerName = reviewerName;
+        reviewRating = rating;
+        mThumbNail = thumbNail;
     }
 
     public String getmReviewerName() {

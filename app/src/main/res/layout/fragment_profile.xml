@@ -5,82 +5,123 @@
     android:layout_height="match_parent"
     android:background="@color/colorLightGrey">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_12dp"
-            android:paddingTop="@dimen/margin_20dp">
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_15dp">
+
+                <TextView
+                    android:id="@+id/tvProfileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20dp"
+                    android:text="@string/profile_name"
+                    android:textSize="@dimen/text_large_20" />
+
+
+                <TextView
+                    android:id="@+id/tvProfileInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvProfileName"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:layout_toLeftOf="@+id/ivProfile"
+                    android:text="@string/profile_info"
+                    android:textColor="#B2B2B2" />
+
+
+                <ImageView
+                    android:id="@+id/ivLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvProfileInfo"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:tint="#B2B2B2"
+                    app:srcCompat="@drawable/ic_location" />
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvProfileInfo"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:layout_toEndOf="@+id/ivLocation"
+                    android:layout_toRightOf="@+id/ivLocation"
+                    android:text="@string/location"
+                    android:textColor="#B2B2B2"
+                    android:textStyle="italic" />
+
+                <ImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignBottom="@+id/tvLocation"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/tvName"
+                    android:src="@drawable/ic_profile" />
+
+
+                <include
+                    android:id="@+id/followeContainer"
+                    layout="@layout/layout_followers_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivProfile"
+                    android:layout_marginTop="@dimen/margin_20dp" />
+
+
+            </RelativeLayout>
 
             <TextView
-                android:id="@+id/tvProfileName"
+                android:id="@+id/tvAllBooks"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_20dp"
-                android:text="@string/profile_name"
-                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:layout_marginStart="@dimen/margin_15dp"
+                android:layout_marginTop="@dimen/margin_15dp"
+                android:text="@string/all_books"
                 android:textSize="@dimen/text_large_18" />
 
 
-            <TextView
-                android:id="@+id/tvProfileInfo"
-                android:layout_width="wrap_content"
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvAllBooks"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tvProfileName"
+                android:layout_marginLeft="@dimen/margin_12dp"
+                android:layout_marginStart="@dimen/margin_12dp"
                 android:layout_marginTop="@dimen/margin_10dp"
-                android:layout_toLeftOf="@+id/ivProfile"
-                android:text="@string/profile_info" />
+                android:clipToPadding="false" />
 
-
-            <ImageView
-                android:id="@+id/ivLocation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tvProfileInfo"
-                android:layout_marginTop="@dimen/margin_8dp"
-                app:srcCompat="@drawable/ic_location" />
 
             <TextView
-                android:id="@+id/tvLocation"
+                android:id="@+id/tvReviews"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tvProfileInfo"
-                android:layout_marginTop="@dimen/margin_8dp"
-                android:layout_toEndOf="@+id/ivLocation"
-                android:layout_toRightOf="@+id/ivLocation"
-                android:text="@string/location" />
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:layout_marginTop="@dimen/margin_15dp"
+                android:text="@string/all_reviews"
+                android:textSize="@dimen/text_large_18" />
 
-            <ImageView
-                android:id="@+id/ivProfile"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_alignBottom="@+id/tvLocation"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignTop="@+id/tvName"
-                android:src="@drawable/all_this_has" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvAllReviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5dp"
+                android:layout_marginStart="@dimen/margin_5dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:clipToPadding="false" />
 
-        </RelativeLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_12dp"
-            android:layout_marginTop="@dimen/margin_15dp"
-            android:text="@string/all_books"
-            android:textSize="@dimen/text_large_18" />
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rvAllBooks"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_12dp"
-            android:layout_marginTop="@dimen/margin_10dp" />
-
-    </LinearLayout>
-
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

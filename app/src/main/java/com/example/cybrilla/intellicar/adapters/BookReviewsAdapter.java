@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.cybrilla.intellicar.R;
@@ -36,6 +37,7 @@ public class BookReviewsAdapter extends RecyclerView.Adapter<BookReviewsAdapter.
         holder.tvReview.setText(mBookReviews.get(position).getmReview());
         holder.tvTitle.setText(mBookReviews.get(position).getmBookName());
         holder.tvRating.setText(mBookReviews.get(position).getReviewRating());
+        holder.ivThumbNail.setImageResource(mBookReviews.get(position).getmThumbNail());
     }
 
     @Override
@@ -57,6 +59,9 @@ public class BookReviewsAdapter extends RecyclerView.Adapter<BookReviewsAdapter.
 
         @BindView(R.id.tvRating)
         TextView tvRating;
+
+        @BindView(R.id.ivBookThumbnail)
+        ImageView ivThumbNail;
 
         public ReviewsHolder(View itemView) {
             super(itemView);

@@ -19,7 +19,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:itemBackground="@color/colorWhite"
-
         app:menu="@menu/bottom_menu" />
 
 

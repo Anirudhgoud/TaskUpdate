@@ -19,4 +19,16 @@
     <string name="profile_info">Focus on product designer, Never stop exploring new design.</string>
     <string name="location">Shangai - China</string>
     <string name="all_books">All books</string>
+    <string name="all_reviews">All Reviews</string>
+    <string name="follow">Follow</string>
+    <string name="following">Following</string>
+    <string name="follower">Follower</string>
+    <string name="rating_value">8.6</string>
+
+
+    <string-array name="nav_drawer_icons">
+        <item>ic_</item>
+        <item>ic_addcategory</item>
+        <item>ic_logout</item>
+    </string-array>
 </resources>

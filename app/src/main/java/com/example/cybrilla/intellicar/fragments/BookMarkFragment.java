@@ -15,6 +15,7 @@ import com.example.cybrilla.intellicar.adapters.BookReviewsAdapter;
 import com.example.cybrilla.intellicar.adapters.BookmarksAdapter;
 import com.example.cybrilla.intellicar.model.BookReviews;
 import com.example.cybrilla.intellicar.model.BookTypes;
+import com.example.cybrilla.intellicar.utils.Utility;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -72,13 +73,15 @@ public class BookMarkFragment extends Fragment {
     }
 
 
-    private List<BookReviews> getReviewData() {
+    public List<BookReviews> getReviewData() {
         List<BookReviews> bookReviews = new ArrayList<>();
         bookReviews.add(new BookReviews(getString(R.string.all_this),
-                getString(R.string.review_1), "Lilly", "8.6"));
+                getString(R.string.review_1), "Lilly", "8.6",
+                Utility.getThumbnail(getContext(), "ic_vinegar_girl")));
         bookReviews.add(new BookReviews(getString(R.string.promise),
                 getString(R.string.review_2),
-                "Jerome Walters", "8.6"));
+                "Jerome Walters", "8.6",
+                Utility.getThumbnail(getContext(), "ic_brain")));
         return bookReviews;
     }
 }

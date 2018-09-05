@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:orientation="horizontal"
+    android:weightSum="3">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.8"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvFollowing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="26"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_medium_16" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/following"
+            android:textColor="#B2B2B2"
+            android:textSize="@dimen/text_medium_14"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.8"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvFollowers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2178"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_medium_16" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/follower"
+            android:textColor="#B2B2B2"
+            android:textSize="@dimen/text_medium_14"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/margin_20dp"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_weight="1.25"
+        android:gravity="center"
+        android:text="@string/follow"
+        android:background="@drawable/gradient_follow_bt_bg"
+        android:textColor="@color/colorWhite" />
+
+</LinearLayout>
+
